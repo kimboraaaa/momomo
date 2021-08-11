@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPM - ipTIME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9448297042.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // 메인 슬라이드
+            var count=0;
+            var pos;
+
+            setInterval(()=>{
+                count+=1;
+                pos=count*(-923) + "px";
+                $(".slide ul").animate({left:pos}, 500, function(){
+                    if(count==6){
+                        count=0;
+                        pos=0;
+                        $(".slide ul").animate({left:0},0);
+                    }
+                });
+            }, 6000);
+
+            // 메인 슬라이드 좌우 버튼
+            var i = 0; // 사진 인덱스를 저장할 변수
+            $(".btn1").click(function(){ // img 크기만큼 왼쪽으로 이동
+                if (i>0) {
+                    i-=1;
+                    $(".slide ul").stop().animate({
+                        "left": -923 * i + "px"
+                    }, "slow");
+                }
+            });
+            
+            $(".btn2").click(function() { // img 크기만큼 오른쪽으로 이동
+                if (i < 6) {
+                    i = i + 1;
+                    $(".slide ul").stop().animate({
+                        "left": -923 * i + "px"
+                    }, "slow");
+                }
+            });
+            
+            // 탭 슬라이드
+            var count2=0;
+            var pos1;
+
+            setInterval(()=>{
+                count2+=1;
+                pos1=count2*(-390) + "px";
+                $(".slidetxt").animate({left:pos1}, 400, function(){
+                    if(count2==4){
+                        count2=0;
+                        pos1=0;
+                        $(".slidetxt").animate({left:0},0);
+                    }
+                });
+            }, 4500);
+
+        });
+
+        // var str = document.querySelectorAll(".txt").value;
+        // document.write(str.substring(0, 35));
+        // document.write(str.concat("..."));
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="login">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">JOIN</a></li>
+                    <li><a href="#">SITEMAP</a></li>
+                </ul>
+            </div>
+            <div class="logo"><a href="#"><img src="./img/logo.gif" alt="logo"></a></div>
+            <nav>
+                <ul>
+                    <li><a href="#">회사소개</a>
+                        <ul>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">채용정보</a></li>
+                            <li><a href="#">연락처</a></li>
+                            <li><a href="#">회사연혁</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">공지/뉴스</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">회사뉴스</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">재미있는 ipTIME</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">제품소개</a>
+                        <ul>
+                            <li><a href="#">제품 전체보기</a></li>
+                            <li><a href="#">유무선 공유기</a></li>
+                            <li><a href="#">AP/Extender</a></li>
+                            <li><a href="#">무선 랜카드</a></li>
+                            <li><a href="#">유선 랜카드</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객지원</a>
+                        <ul>
+                            <li><a href="#">자주묻는 질문</a></li>
+                            <li><a href="#">Q&A</a></li>
+                            <li><a href="#">제품 사용기</a></li>
+                            <li><a href="#">다운로드</a></li>
+                            <li><a href="#">고객지원안내</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">제품구입</a>
+                        <ul>
+                            <li><a href="#">ipTIME 판매점</a></li>
+                            <li><a href="#">제품구매</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="slide_sec">
+                <div class="btn1">
+                    <img src="./img/btn_left.gif" alt="btn_left">
+                </div>
+                <div class="slide">
+                    <ul class="slide_g">
+                        <li><img src="./img/slide1.gif" alt="slide1"></li>
+                        <li><img src="./img/slide2.gif" alt="slide2"></li>
+                        <li><img src="./img/slide3.jpg" alt="slide3"></li>
+                        <li><img src="./img/slide4.jpg" alt="slide4"></li>
+                        <li><img src="./img/slide5.jpg" alt="slide5"></li>
+                        <li><img src="./img/slide6.jpg" alt="slide6"></li>
+                        <li><img src="./img/slide1.gif" alt="slide1"></li>
+                    </ul>
+                </div>
+                <div class="btn2">
+                    <img src="./img/btn_right.gif" alt="btn_right">
+                </div>
+            </section>
+            <section>
+                <div class="notice">
+                    <input type="radio" name="tabs1" id="tab1" checked>
+                    <label for="tab1">공지사항</label>
+                    <input type="radio" name="tabs1" id="tab2">
+                    <label for="tab2">회사뉴스</label>
+                    
+                    <div id="content1">
+                        <p><span>07/22</span><a href="#">[펌웨어] Ring A8 - 14.07.2 버전으로 수동 업그레...</a></p>
+                        <p><span>07/21</span><a href="#">[펌웨어] ipTIME 유무선 공유기 펌웨어 14.07.2...</a></p>
+                        <p><span>07/09</span><a href="#">[펌웨어] ipTIME A6004MX/AX2004M/AX8004B...</a></p>
+                        <p><span>07/06</span><a href="#">[펌웨어] ipTIME 유무선 공유기 펌웨어 14.06.6...</a></p>
+                    </div>
+                    <div id="content2">
+                        <p><span>07/22</span><a href="#">아이피타임, PoE 지원 스위칭 허브 PoE1600plus...</a></p>
+                        <p><span>07/21</span><a href="#">급할때 빠르게 사용할 수 있는 USB 랜카드, AC120...</a></p>
+                        <p><span>07/18</span><a href="#">합리적인 가격에 AX3200-이지메시로 무장한 유무...</a></p>
+                        <p><span>07/11</span><a href="#">ipTIME, AC1200급 초소형 USB 무선랜카드 A3000...</a></p>
+                    </div>
+                </div>
+                <div class="review">
+                    <input type="radio" name="tabs2" id="tab3" checked>
+                    <label for="tab3">제품 사용기</label>
+                    <input type="radio" name="tabs2" id="tab4">
+                    <label for="tab4">자주묻는 질문</label>
+
+                    <div id="content3">
+                        <div class="tabslide">
+                            <div class="slidetxt">
+                                <div class="txt">
+                                    <p><a href="#">이지메시 인터넷 유무선 공유기 ipTIME A3002MESH 설정 및<br>속도 측정</a></p>
+                                </div>
+                                <img src="./img/review1.PNG" alt="review1">
+                            </div>
+                            <div class="slidetxt">
+                                <div class="txt">
+                                    <p><a href="#">무선 와이파이 공유기 추천 ipTIME AX2004BCM</a></p>
+                                </div>
+                                <img src="./img/review2.PNG" alt="review2">
+                            </div>
+                            <div class="slidetxt">
+                                <div class="txt">
+                                    <p><a href="#">가정용 홈 CCTV 추천, ipTIME IP카메라 C200</a></p>
+                                </div>
+                                <img src="./img/review3.PNG" alt="review3">
+                            </div>
+                            <div class="slidetxt">
+                                <div class="txt">
+                                    <p><a href="#">와이파이6 지원하는 인텔 와이파이공유기 아이피타임  AX3004ITL</a></p>
+                                </div>
+                                <img src="./img/review4.PNG" alt="review4">
+                            </div>
+                            <div class="slidetxt">
+                                <div class="txt">
+                                    <p><a href="#">이지메시 인터넷 유무선 공유기 ipTIME A3002MESH 설정 및<br>속도 측정</a></p>
+                                </div>
+                                <img src="./img/review1.PNG" alt="review1">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="content4">
+                        <p><span>Q1</span><a href="#">ipTIME 이지메시(Easymesh) 기술자료</a></p>
+                        <p><span>Q2</span><a href="#">ipTIME NAS의 WebDAV 서버 사용하기</a></p>
+                        <p><span>Q3</span><a href="#">NAS기능 지원 공유기에서의 토렌트 기능 설정방법</a></p>
+                        <p><span>Q4</span><a href="#">ipTIME 공유기 소프트웨어(펌웨어) 수동 업그레이드</a></p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="link">
+                    <div class="linktitle"><h1>자주찾는 메뉴</h1></div>
+                    <div class="leftbox">
+                        <div class="linkbox1"><a href="#"><img src="./img/icon1.png" alt="icon1"></a></div>
+                        <div class="linkbox1"><a href="#"><img src="./img/icon2.png" alt="icon2"></a></div>
+                        <div class="linkbox1"><a href="#"><img src="./img/icon3.png" alt="icon3"></a></div>
+                        <div class="linkbox1"><a href="#"><img src="./img/icon4.png" alt="icon4"></a></div>
+                    </div>
+                    <div class="rightbox">
+                        <div class="linkbox2"><a href="#"><img src="./img/icon5.png" alt="icon5"></a></div>
+                        <div class="linkbox2"><a href="#"><img src="./img/icon6.png" alt="icon6"></a></div>
+                        <div class="linkbox2"><a href="#"><img src="./img/icon7.png" alt="icon7"></a></div>
+                        <div class="linkbox2"><a href="#"><img src="./img/icon8.png" alt="icon8"></a></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <!-- <div class="footertitle">
+                <h2>고객지원</h2>
+            </div> -->
+            <div class="banner">
+                <a href="#"><img src="./img/banner1.gif" alt="banner1"></a>
+                <a href="#"><img src="./img/banner2.gif" alt="banner2"></a>
+            </div>
+            <div class="service">
+                <a href="#"><img src="./img/help1.gif" alt="help1"></a>
+                <a href="#"><img src="./img/help2.gif" alt="help2"></a>
+                <a href="#"><img src="./img/help3.gif" alt="help3"></a>
+                <a href="#"><img src="./img/help4.gif" alt="help4"></a>
+            </div>
+            <div>
+                <img src="./img/main_bottom.gif" alt="footer">
+            </div>
+        </footer>
+    </div>
+<!-- 
+    [펌웨어] Ring A8 - 14.07.2 버전으로 수동 업그레이드 실패 시 조치사항
+    [펌웨어] ipTIME 유무선 공유기 펌웨어 14.07.2 배포(21종)
+    [펌웨어] ipTIME A6004MX/AX2004M/AX8004BCM/A8004T-XR 펌웨어 14.06.8 배포
+    [펌웨어] ipTIME 유무선 공유기 펌웨어 14.06.6 배포(18종)
+
+    아이피타임, PoE 지원 스위칭 허브 PoE1600plus, PoE2400plus 출시
+    급할때 빠르게 사용할 수 있는 USB 랜카드, AC1200급 ipTIME A3000mini
+    합리적인 가격에 AX3200-이지메시로 무장한 유무선 공유기, 아이피타임 'AX8004M'
+    ipTIME, AC1200급 초소형 USB 무선랜카드 A3000mini 출시 -->
+</body>
+</html>

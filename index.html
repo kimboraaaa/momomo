@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수원박물관</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9448297042.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- 동영상 -->
+        <div class="video_area">
+            <div class="exhib">
+                <!-- <h1>수원 산루리의 독립 영웅들<h1> -->
+                <p>2021.07.05(월)<br>~<br>10.03(일)<br>
+                <span>수원박물관 기획전시실</span></p>
+            </div>
+            <div class="video">
+                <iframe width="350" height="197" src="https://www.youtube.com/embed/nMMoJjOAltc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="video_c">
+            <form>
+                <label><input type="checkbox" name="todayClose"><span>오늘 하루 그만보기</span></label>
+            </form>
+            <div class="top"><a href="#none" class="video_close"><img src="./images/menu2_3.png" alt="close"></a></div>
+        </div>
+        <!-- 팝 메뉴 영역 -->
+        <div class="menu_close"><a href="#none"><img src="./images/menu2_3.png" alt="close"></a></div>
+        <div id="popmenu">
+            <!-- 로그인 -->
+            <div class="login_join">
+                <div class="login"><a href="#none">로그인</a></div>
+                <div class="join"><a href="#none">회원가입</a></div>
+                <div class="sns">
+                    <a href="#none"><i class="fab fa-instagram"></i></a><!-- f16d -->
+                    <a href="#none"><i class="fab fa-facebook-f"></i></a><!-- f39e -->
+                    <a href="#none"><i class="fab fa-blogger-b"></i></a><!-- f37d -->
+                </div>
+            </div>
+            <!-- 메뉴 -->
+            <div id="gnb">
+                <ul class="gnb">
+                  <li class="depth01" id="mem01" ><a href="#none">이용안내<i class="fal fa-chevron-right"></i></a>
+                    <ul class="subgnb">
+                      <li class="mem11"><a href="#none">관람안내</a></li>
+                      <li class="mem12"><a href="#none">예약안내</a></li>
+                      <li class="mem13"><a href="#none">시설안내</a></li>
+                      <li class="mem14"><a href="#none">북카페안내</a></li>
+                      <li class="mem15"><a href="#none">대관안내</a></li>
+                      <li class="mem16"><a href="#none">기증안내</a></li>
+                      <li class="mem17"><a href="#none">자원봉사안내</a></li>
+                      <li class="mem18"><a href="#none">오시는길</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01" id="mem02"><a href="#none">전시안내<i class="fal fa-chevron-right"></i></a>
+                    <ul class="subgnb">
+                      <li class="mem21"><a href="#none">수원역사박물관</a></li>
+                      <li class="mem22"><a href="#none">한국서예박물관</a></li>
+                      <li class="mem23"><a href="#none">기획전시</a></li>
+                      <li class="mem24"><a href="#none">야외전시</a></li>
+                       <li class="mem25"><a href="#none">사이버전시관</a></li> 
+                    </ul>
+                  </li>
+                  <li class="depth01" id="mem03"><a href="#none">교육<i class="fal fa-chevron-right"></i></a>
+                    <ul class="subgnb">
+                       <li id="mem40"><a href="#none">온라인교육</a></li>
+                      <li id="mem41"><a href="#none">수박에 놀러와</a></li>
+                      <li class="mem31"><a href="h#none">교육일정</a></li>
+                      <li class="mem32"><a href="#none">성인교육</a></li>
+                      <li class="mem34"><a href="#none">어린이교육</a></li>
+                      <li class="mem35"><a href="#none">학교연계</a></li>
+                      <li class="mem33"><a href="#none">청소년교육</a></li>
+                      <li class="mem39"><a href="#none">문화유적답사</a></li>
+                      <li class="mem36"><a href="#none">어린이체험실(VR)</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01" id="mem04"><a href="#none">열린마당<i class="fal fa-chevron-right"></i></a>
+                    <ul class="subgnb">
+                      <li class="mem41"><a href="#none">자유게시판</a></li>
+                      <li class="mem43"><a href="#none">관람후기</a></li>
+                      <li class="mem44"><a href="#none">포토갤러리</a></li>
+                      <li class="mem46"><a href="#none">설문조사</a></li>
+                      <li class="mem47"><a href="#none">수령등록</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01" id="mem05"><a href="#none">자료실<i class="fal fa-chevron-right"></i></a>
+                    <ul class="subgnb">
+                      <li class="mem51"><a href="#none">자료정보실</a></li>
+                      <li class="mem52"><a href="#none">유물검색</a></li>
+                      <li class="mem59"><a href="#none">유물자료실</a></li>
+                      <li class="mem53"><a href="#none">수원의인물</a></li>
+                      <li class="mem54"><a href="/#none">근대수원의 문화공간</a></li>
+                      <li class="mem55"><a href="#none">발간도서</a></li>
+                      <li class="mem56"><a href="#none">E-BOOK</a></li>
+                      <li class="mem57"><a href="#none">다운로드</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01" id="mem06"><a href="#none">박물관소개<i class="fal fa-chevron-right"></i></a>
+                    <ul class="subgnb">
+                      <li class="mem61"><a href="#none">인사말</a></li>
+                      <li class="mem62"><a href="#none">박물관개요</a></li>
+                      <li class="mem63"><a href="#none">박물관연혁</a></li>
+                      <li class="mem64"><a href="#none">박물관로고</a></li>
+                      <li class="mem65"><a href="#none">조직및부서</a></li>
+                    </ul>
+                  </li>
+                  <li class="depth01" id="mem07"><a href="#none">박물관소식<i class="fal fa-chevron-right"></i></a>
+                    <ul class="subgnb">
+                      <li class="mem71"><a href="#none">공지사항</a></li>
+                      <li class="mem72"><a href="#none">교육/행사소식</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="langauge">
+                  <div class="active"><a href="#none">korean</a></div>
+                  <div><a href="#none">english</a></div>
+                  <div><a href="#none">japanese</a></div>
+                  <div><a href="#none">chinese</a></div>
+              </div>
+        </div>
+        <div class="popbg active"></div>
+        <!-- 헤더(로고, 메뉴버튼) -->
+        <header>
+            <div class="logo">
+                <a href="#none">
+                    <img src="./images/logo.gif" alt="logo">
+                </a>
+            </div>
+            <div class="menubtn">
+                <a href="#none">
+                    <img src="./images/menu1_2.png" alt="manu">
+                </a>
+            </div>
+        </header>
+        <!-- 공지사항 -->
+        <div class="notice">
+            <ul>
+                <li>
+                    <a href="#none">
+                        <p>
+                            <span>2021.07.16</span>2021년 수원박물관 여름방학 교육 안내
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>
+                            <span>2021.07.01</span><수원 산루리의 독립영웅들> 전시기간 연장
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>
+                            <span>2021.06.28</span>2021.06.30.(수) 경기도 문화가 있는 날 무료관람 안내
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>
+                            <span>2021.06.28</span>코로나19 예방접종자 혜택
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>
+                            <span>2021.04.22</span>'어린이체험실' 운영 중단 안내
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>
+                            <span>2017.11.03</span>수원박물관 작은결혼식 안내
+
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <p>
+                            <span>2021.07.16</span>2021년 수원박물관 여름방학 교육 안내
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 메인 영역 -->
+        <main>
+            <!-- 슬라이드 -->
+            <section class="slide">
+                <div class="tab">
+                    <div class="left"><img src="./images/left.png" alt="left"></i></div>
+                    <!-- <div class="pause"><img src="./images/pause.png" alt="pause"></div> -->
+                    <div class="right"><img src="./images/right.png" alt="right"></div>
+                </div>
+                <ul>
+                    <li><a href="#none"><img src="./images/slide1.jpg" alt="slide1"></a></li>
+                    <li><a href="#none"><img src="./images/slide2.jpg" alt="slide2"></a></li>
+                    <li><a href="#none"><img src="./images/slide3.jpg" alt="slide3"></a></li>
+                    <li><a href="#none"><img src="./images/slide4.jpg" alt="slide4"></a></li>
+                    <li><a href="#none"><img src="./images/slide5.jpg" alt="slide5"></a></li>
+                    <li><a href="#none"><img src="./images/slide6.jpg" alt="slide6"></a></li>
+                    <li><a href="#none"><img src="./images/slide1.jpg" alt="slide1"></a></li>
+                </ul>
+            </section>
+             <!-- 관람 안내 -->
+             <section class="info">
+                <h1><i class="far fa-clock"></i>관람시간</h1>
+                <p>화/수/목/금/토/일 <span class="time1"> 09:00 ~ 18:00</span></p>
+                <h1><i class="fal fa-calendar-times"></i>휴관일</h1>
+                <p>매주 월요일<br><span class="memo">(그 밖에 시장이 정하는 휴관일)</span></p>
+                <h1><i class="fal fa-ticket-alt"></i>매표시간</h1>
+                <p><span class="time2">09:00 ~ 17:00 </span><span class="memo">(관람시간 종료 1시간 전까지)</span></p>
+            </section>
+            <!-- 교육 영역 -->
+            <section class="edu">
+                <div class="offline">
+                    <a href="#none"><h2>박물관 교육</h2><i class="fal fa-plus-square"></i></a>
+                    <div class="offbox">
+                        <div class="list">
+                            <p>박물관에서 만나는 왕실태교<br>
+                            <span>교육일시 : 2021.08.12(목) ~ 08.31(화) 00:00 ~ 00:00</span></p>
+                            <div class="status">접수중</div>
+                        </div>
+                        <div class="list">
+                            <p>[온라인 박물관 교실]<br>
+                            <span>교육일시 : 2021.08.12(목) 15:00 ~ 16:30</span></p>
+                            <div class="status">접수중</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="online">
+                    <a href="#none"><h2>온라인 교육</h2><i class="fal fa-plus-square"></i></a>
+                    <div class="onbox">
+                        <div class="list">
+                            <p>온라인 <서예문인화교실> 문인화 10강<br>
+                            <span>작성일 : 2021.07.28</span></p>
+                            <div class="status">교육</div>
+                        </div>
+                        <div class="list">
+                            <p>온라인 인문강좌 <여민학당> 10강<br>
+                            <span>작성일 : 2021.07.27</span></p>
+                            <div class="status">교육</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 유물 소개 -->
+            <section class="introduce">
+                <div class="introtitle">
+                    <h3>수원박물관 유물</h3>
+                    <p>수원박물관에서<br>소장중인 대표 유물 3가지</p>
+                </div>
+                <div class="introimg">
+                    <div id="img1">
+                        <img src="./images/relics1_1.jpg" alt="relics1">
+                        <div class="imgtext"><a href="#none"><p>박유명 초상<br><span>보물 제1469호</span></p></a></div>
+                    </div>
+                    <div id="img2">
+                        <img src="./images/relics2.jpg" alt="relics2">
+                        <div class="imgtext"><a href="#none"><p>팔달문 동종<br><span>경기도 유형문화재<br>제69호</span></p></a></div>
+                    </div>
+                    <div id="img3">
+                        <img src="./images/relics3.jpg" alt="relics3">
+                        <div class="imgtext"><a href="#none"><p>삼사탑명첩<br><span>경기도유형문화재<br>제324호</span></p></a></div>
+                    </div>
+                </div>
+                <div class="introbtn"><a href="#none">더 많은 유물 둘러보기<i class="fal fa-chevron-right"></i></a></div>
+            </section>
+            <!-- 예약 -->
+            <section class="reserv">
+                <div class="reserv_sub">
+                    <a href="#none">
+                    <img src="./images/reserve1.png" alt="reserve1">
+                    <p>전시관람<br>단체 예약</p></a>
+                </div>
+                <div class="reserv_sub">
+                    <a href="#none">
+                     <img src="./images/reserve2.png" alt="reserve2">
+                     <p>어린이<br>체험실 예약</p></a>
+                </div>
+                <div class="reserv_sub">
+                    <a href="#none">
+                     <img src="./images/reserve3.png" alt="reserve3">
+                     <p>소장유물<br>검색</p></a>
+                </div>
+                <div class="reserv_sub">
+                    <a href="#none">
+                     <img src="./images/reserve4.png" alt="reserve4">
+                     <p>시설안내</p></a>
+                </div>
+            </section>
+        </main>
+        <!-- 푸터 영역 -->
+        <footer>
+            <!-- 패밀리 사이트 -->
+            <div class="familysite">
+                <a href="#none">
+                    <img src="./images/familysite1.gif" alt="familysite1"></a>
+                <a href="#none">
+                    <img src="./images/familysite2.gif" alt="familysite2"></a>
+                <a href="#none">
+                    <img src="./images/familysite3.gif" alt="familysite3"></a>
+                <a href="#none">
+                    <img src="./images/familysite4.gif" alt="familysite4"></a>
+            </div>
+            <!-- 카피라이트 -->
+            <div class="foot">
+                <div class="foot_1">
+                    <ul>
+                        <li><a href="#none">이용약관</a></li>
+                        <li><a href="#none">개인정보처리방침</a></li>
+                        <li><a href="#none">오시는길</a></li>
+                    </ul>
+                </div>
+                <div class="foot_2">
+                    <p>
+                        [16227] 경기도 수원시 영통구 창룡대로 265(이의동)<br>TEL 031.228.4150 FAX 031.228.4149<br>
+                        <span>COPYRIGHT 2014 SUWON MUSEUM. ALL RIGHT RESERVED</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
